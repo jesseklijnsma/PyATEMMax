@@ -378,6 +378,7 @@ This is the complete list of settings stored in the `ATEMMax` object:
 * `switcher.tally.bySource.flags[videoSource].program`
 * `switcher.tally.bySource.sources`
 * `switcher.tally.channelConfig.tallyChannels`
+* `switcher.tally.call.isActive`
 
 #### topology
 * `switcher.topology.auxBusses`

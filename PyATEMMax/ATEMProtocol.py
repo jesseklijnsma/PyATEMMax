@@ -161,6 +161,7 @@ class ATEMProtocol:
         "AMTl": 'Audio Mixer Tally',
         "TlIn": 'Tally By Index',
         "TlSr": 'Tally By Source',
+        'TlFc': 'Tally Call',
         "Time": 'Last State Change Time Code',
         'InCm': 'Initialization Complete',
 
@@ -186,7 +187,6 @@ class ATEMProtocol:
         'RXSS': 'Not implemented: RXSS',
         'SPtM': 'Not implemented: SPtM',
         'SPZS': 'Not implemented: SPZS',
-        'TlFc': 'Not implemented: TlFc',
         'TMIP': 'Not implemented: TMIP',
         'V3sl': 'Not implemented: V3sl',
         'VuMC': 'Not implemented: VuMC',

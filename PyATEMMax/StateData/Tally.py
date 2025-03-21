@@ -59,7 +59,13 @@ class Tally():
             self.tallyChannels: int = 0
 
 
+    class Call():
+        def __init__(self): # Tally.Call
+            self.isActive: bool = False
+
+
     def __init__(self): # Tally
         self.byIndex: Tally.ByIndex = Tally.ByIndex()
         self.bySource: Tally.BySource = Tally.BySource()
         self.channelConfig: Tally.ChannelConfig = Tally.ChannelConfig()
+        self.call: Tally.Call = Tally.Call()

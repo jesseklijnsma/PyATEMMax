@@ -900,6 +900,22 @@ class ATEMCommandHandlers():
             self._d.tally.bySource.flags[videoSource].preview = self._inBuf.getU8Flag(byteOffset+2, 1)
 
 
+    def _handleTlFc(self) -> None:
+        """Handle Tally Call command.
+        
+        This command indicates when a tally call button is pressed (status=3) or released (status=2).
+        The status is the same for all sources, so we only check the first source's status.
+        """
+        sources = self._inBuf.getU16(0)
+        if sources > 0:
+            # Status byte is at offset 4 for the first source
+            status = self._inBuf.getU8(4)
+            if status == 3:
+                self._d.tally.call.isActive = True
+            elif status == 2:
+                self._d.tally.call.isActive = False
+
+
     def _handleTime(self) -> None:
         self._d.lastStateChange.timeCode.hour = self._inBuf.getU8(0)
         self._d.lastStateChange.timeCode.minute = self._inBuf.getU8(1)
